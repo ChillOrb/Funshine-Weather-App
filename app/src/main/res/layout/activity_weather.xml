@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#499EEC"
+    tools:context="com.example.raksh.funshine.WeatherActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="?android:attr/colorActivatedHighlight"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/weatherIconMini"
+            android:layout_width="119dp"
+            android:layout_height="67dp"
+            android:paddingBottom="5dp"
+            app:srcCompat="@drawable/sunny" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="163dp"
+            android:layout_height="74dp"
+            app:srcCompat="@drawable/funshine_logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="25dp">
+
+        <TextView
+            android:id="@+id/weatherDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Today , August 2"
+            android:textColor="#ffff"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:layout_width="384dp"
+            android:layout_height="132dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/currentTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="78°"
+                android:textColor="#ffff"
+                android:textSize="100dp" />
+
+            <TextView
+                android:id="@+id/lowTemp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="64°"
+                android:textColor="#ffff"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/weatherIcon"
+                android:layout_width="120dp"
+                android:layout_height="105dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/sunny" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/cityCountry"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Gurugram"
+            android:textColor="#ffff"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/weatherDescription"
+            android:layout_width="3dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="Clear"
+            android:textColor="#ffff"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/content_weather_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</android.support.v4.widget.NestedScrollView>
